@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            margin: 0 40px 50px 0;
+        }
+
+        .mp3-item:after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+
+        .mp3-item {
+            border: 1px solid rgba(13, 23, 20, 0.2);
+            border-radius: 10px;
+            display: flex;
+            padding: 6px;
+            margin: 0 0 10px 0;
+        }
+
+        * {
+            clear: both;
+        }
+
+        audio {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .stt {
+            text-align : center;
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+
+        .song-name{
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>My music</h2>
+<div id="mp3" class="container">
+
+</div>
+<audio controls autoplay="autoplay" id="play">
+    <source id="src-song" src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<script src="my.js"></script>
+
+</body>
+</html>
